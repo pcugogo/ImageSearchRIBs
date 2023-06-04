@@ -7,6 +7,7 @@
 //
 
 import RIBs
+import RxSwift
 
 protocol SearchInteractable: Interactable, ImageDetailListener {
     var router: SearchRouting? { get set }
@@ -17,6 +18,7 @@ protocol SearchViewControllable: ViewControllable {}
 
 final class SearchRouter: ViewableRouter<SearchInteractable, SearchViewControllable>, SearchRouting {
     private let imageDetailBuilder: ImageDetailBuilder
+    private let disposeBag = DisposeBag()
     
     init(
         interactor: SearchInteractable,
@@ -31,9 +33,20 @@ final class SearchRouter: ViewableRouter<SearchInteractable, SearchViewControlla
     func routeToImageDetail(with imageURLString: String) {
         let imageDetail = imageDetailBuilder.build(withListener: interactor, imageURLString: imageURLString)
         attachChild(imageDetail)
+        bindDetachWhenRoutingViewDisappears(routing: imageDetail)
         viewController.uiviewController.navigationController?.pushViewController(
             imageDetail.viewControllable.uiviewController,
             animated: true
         )
+    }
+    
+    private func bindDetachWhenRoutingViewDisappears(routing: ViewableRouting) {
+        routing.viewControllable.uiviewController.rx.viewDidDisappear
+            .take(1)
+            .subscribe(onNext: { [weak self, weak routing] _ in
+                guard let routing = routing else { return }
+                self?.detachChild(routing)
+            })
+            .disposed(by: disposeBag)
     }
 }

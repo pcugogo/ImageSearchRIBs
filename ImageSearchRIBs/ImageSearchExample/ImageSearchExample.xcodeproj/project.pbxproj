@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A6C130A5C845062D5469476E /* Pods_ImageSearchExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53C05C7D93E285EDCA8C1FE /* Pods_ImageSearchExample.framework */; };
+		CAC02C6A2A2CC308008DBFF7 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC02C692A2CC307008DBFF7 /* UIViewController+Rx.swift */; };
 		CAF90D132A20FC9600BD91E7 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = CAF90D122A20FC9600BD91E7 /* RIBs */; };
 		CAF90D162A20FCAC00BD91E7 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = CAF90D152A20FCAC00BD91E7 /* RxBlocking */; };
 		CAF90D182A20FCAC00BD91E7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CAF90D172A20FCAC00BD91E7 /* RxCocoa */; };
@@ -93,6 +94,7 @@
 		6E89F32AF046B976568DD1AD /* Pods-ImageSearchExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearchExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSearchExample/Pods-ImageSearchExample.release.xcconfig"; sourceTree = "<group>"; };
 		BFF5C1E8420917CF436F35CB /* Pods_ImageSearchExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearchExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53C05C7D93E285EDCA8C1FE /* Pods_ImageSearchExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearchExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC02C692A2CC307008DBFF7 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		CAF90D2A2A20FD1300BD91E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CAF90D2D2A20FE4B00BD91E7 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		CAF90D362A20FE8E00BD91E7 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				FC846E50258105170076BBA7 /* UIViewController+instantiateFromStoryboard.swift */,
+				CAC02C692A2CC307008DBFF7 /* UIViewController+Rx.swift */,
 				FC697F4724A0FE220050C154 /* UIViewController+showAlert.swift */,
 			);
 			path = Extensions;
@@ -689,6 +692,7 @@
 				FCED62A6258A2C5600CCC9D0 /* FavoritesRepository.swift in Sources */,
 				FC3B460B2A22549100E86856 /* ImageDetailInteractor.swift in Sources */,
 				FCD30DEF25741C59004734D8 /* APIServiceType.swift in Sources */,
+				CAC02C6A2A2CC308008DBFF7 /* UIViewController+Rx.swift in Sources */,
 				FC697F4E24A0FE530050C154 /* API.swift in Sources */,
 				CAF90D882A23847300BD91E7 /* SearchComponent+ImageDetail.swift in Sources */,
 				FC805F2124E6B87600AFC1E2 /* SearchUseCase.swift in Sources */,
